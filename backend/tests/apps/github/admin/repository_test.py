@@ -84,7 +84,7 @@ class TestRepositoryAdmin:
 
         assert "href" in result
         assert "https://github.com/OWASP/Nest" in result
-        assert 'target="_blank"' in result
+        assert "target='_blank'" in result
         assert "↗️" in result
 
     def test_custom_field_github_url_exact_html(self):
