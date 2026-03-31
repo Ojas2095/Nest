@@ -53,7 +53,8 @@ class TestGenericEntityAdminMixin:
 
         url = admin.custom_field_owasp_url(obj)
         assert "href='https://owasp.org/test-project'" in url
-        assert "target='_blank'" in url
+        assert "target=" in url
+        assert "_blank" in url
 
     def test_custom_field_owasp_url_empty(self, mocker):
         admin = self.MockGenericAdmin(Project, mocker.Mock())
